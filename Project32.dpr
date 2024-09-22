@@ -11,16 +11,16 @@ var
 begin
   SetConsoleCP(1251);
   SetConsoleOutputCP(1251);
-  Writeln('Ââåäèòå êîîðäèíàòû òî÷êè');
+  Writeln('Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã²Ã®Ã·ÃªÃ¨');
   Readln(x,y);
 
-  if y >=  Sqr(x) -2 then begin
+  if y >=  x*x -2 then begin
     if ((y <=0) and (y>=x)) or (y<=x) then
-      Writeln('Òî÷êà ïðèíàäëåæèò')
+      Writeln('Ã’Ã®Ã·ÃªÃ  Ã¯Ã°Ã¨Ã­Ã Ã¤Ã«Ã¥Ã¦Ã¨Ã²')
     else
-        Writeln('Òî÷êà íå ïðèíàäëåæèò')
+        Writeln('Ã’Ã®Ã·ÃªÃ  Ã­Ã¥ Ã¯Ã°Ã¨Ã­Ã Ã¤Ã«Ã¥Ã¦Ã¨Ã²')
   end
   else
-    Writeln('Òî÷êà íå ïðèíàäëåæèò');
+    Writeln('Ã’Ã®Ã·ÃªÃ  Ã­Ã¥ Ã¯Ã°Ã¨Ã­Ã Ã¤Ã«Ã¥Ã¦Ã¨Ã²');
   Readln;
 end.
