@@ -1,7 +1,7 @@
 program treu;
- {Ââåäèòå òðè ÷èñëà. Åñëè îíè ìîãóò áûòü äëèíàìè ñòîðîí ðàçíîñòîðîííåãî
- îñòðîóãîëüíîãî òðåóãîëüíèêà, âûâåäèòå èõ â ïîðÿäêå âîçðàñòàíèÿ
- è âû÷èñëèòå ïëîùàäü ïîëó÷åííîãî  òðåóãîëüíèêà }
+ {Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã²Ã°Ã¨ Ã·Ã¨Ã±Ã«Ã . Ã…Ã±Ã«Ã¨ Ã®Ã­Ã¨ Ã¬Ã®Ã£Ã³Ã² Ã¡Ã»Ã²Ã¼ Ã¤Ã«Ã¨Ã­Ã Ã¬Ã¨ Ã±Ã²Ã®Ã°Ã®Ã­ Ã°Ã Ã§Ã­Ã®Ã±Ã²Ã®Ã°Ã®Ã­Ã­Ã¥Ã£Ã®
+ Ã®Ã±Ã²Ã°Ã®Ã³Ã£Ã®Ã«Ã¼Ã­Ã®Ã£Ã® Ã²Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨ÃªÃ , Ã¢Ã»Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ãµ Ã¢ Ã¯Ã®Ã°Ã¿Ã¤ÃªÃ¥ Ã¢Ã®Ã§Ã°Ã Ã±Ã²Ã Ã­Ã¨Ã¿
+ Ã¨ Ã¢Ã»Ã·Ã¨Ã±Ã«Ã¨Ã²Ã¥ Ã¯Ã«Ã®Ã¹Ã Ã¤Ã¼ Ã¯Ã®Ã«Ã³Ã·Ã¥Ã­Ã­Ã®Ã£Ã®  Ã²Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨ÃªÃ  }
 {$APPTYPE CONSOLE}
 
 uses
@@ -15,17 +15,17 @@ var
 begin
   SetConsoleCP(1251);
   SetConsoleOutputCP(1251);
-  Writeln('Ââåäèòå äëèíû ñòîðîí òðåóãîëüíèêà');
+  Writeln('Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã«Ã¨Ã­Ã» Ã±Ã²Ã®Ã°Ã®Ã­ Ã²Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨ÃªÃ ');
   Readln(ab,bc,ca);
 
-  if not((ab > 0) and (bc > 0) and (ca > 0) and (ab + bc > ca) and (ab + ca > bc) and (bc + ca > ab)) then begin
-      Writeln('Òðåóãîëüíèê íå ñóùåñòâóåò'); end
+  if not((ab > 0) and (bc > 0) and (ca > 0) and (ab + bc - ca > e ) and (ab + ca - bc > e) and (bc + ca - ab > e)) then begin
+      Writeln('Ã’Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨Ãª Ã­Ã¥ Ã±Ã³Ã¹Ã¥Ã±Ã²Ã¢Ã³Ã¥Ã²'); end
   else begin
       if not((ab <> bc) and (bc <> ca) and (ab <> ca)) then begin
-        Writeln('Òðåóãîëüíèê íå ðàçíîñòîðîííèé')end
+        Writeln('Ã’Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨Ãª Ã­Ã¥ Ã°Ã Ã§Ã­Ã®Ã±Ã²Ã®Ã°Ã®Ã­Ã­Ã¨Ã©')end
       else begin
-          if not((ab * ab + bc * bc > ca*ca) and (ab * ab + ca*ca > bc * bc) and (ca * ca + bc * bc > ab * ab)) then begin
-            Writeln('Òðåóãîëüíèê íå îñòðîóãîëüíûé') end
+          if not((ab * ab + bc * bc - ca*ca> e ) and (ab * ab + ca*ca - bc * bc  > e ) and (ca * ca + bc * bc - ab * ab  > e)) then begin
+            Writeln('Ã’Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨Ãª Ã­Ã¥ Ã®Ã±Ã²Ã°Ã®Ã³Ã£Ã®Ã«Ã¼Ã­Ã»Ã©') end
           else begin
             p:= (ab + bc + ca) / 2;
             square:= Sqrt(p*(p-ab)*(p-bc)*(p-ca));
@@ -42,8 +42,8 @@ begin
             else if ca - mid > e then begin   // ab > ca
                     min:=mid;
                     mid:= ca; end;
-            Writeln('Ïëîùàäü òðåóãîëüíèêà = ',square);
-            Writeln('Äëèíû ñòîðîí â ïîðÿäêå âîçðàñòàíèÿ ( òî÷íîñòü äî ìèëëèîíîé): ',min,' ', mid,' ', max);
+            Writeln('ÃÃ«Ã®Ã¹Ã Ã¤Ã¼ Ã²Ã°Ã¥Ã³Ã£Ã®Ã«Ã¼Ã­Ã¨ÃªÃ  = ',square);
+            Writeln('Ã„Ã«Ã¨Ã­Ã» Ã±Ã²Ã®Ã°Ã®Ã­ Ã¢ Ã¯Ã®Ã°Ã¿Ã¤ÃªÃ¥ Ã¢Ã®Ã§Ã°Ã Ã±Ã²Ã Ã­Ã¨Ã¿ ( Ã²Ã®Ã·Ã­Ã®Ã±Ã²Ã¼ Ã¤Ã® Ã¬Ã¨Ã«Ã«Ã¨Ã®Ã­Ã®Ã©): ',min,' ', mid,' ', max);
 
           end;// if not((ab * ab + bc * bc > ca*ca) and (ab * ab + ca*ca > bc * bc) and (ca * ca + bc * bc > ab * ab))
       end;// if not((ab <> bc) and (bc <> ca) and (ab <> ca))
